@@ -260,4 +260,8 @@ class Trainer(object):
         else:
             torch.save(self.model.state_dict(), filename)
 
+start_time = time.time()
 Trainer().train()
+end_time = time.time()
+total_time = end_time - start_time
+print("Total training time for both models: {:.2f} seconds".format(total_time))
